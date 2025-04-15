@@ -29,6 +29,9 @@ docker-build-clean:: ## cleanly builds the docker image locally
 			-t $(IMAGE_TAG) \
 				$(WORKING_DIR)
 
+docker-pull:: ## pulls the docker image locally
+		@docker pull $(IMAGE_TAG)
+
 docker-run:: ## Runs the docker image
 		docker run \
 			--name mlflow \
